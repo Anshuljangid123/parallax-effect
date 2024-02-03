@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parallax effect.</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .wrapper{
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            /* z axis me khelna hia to perspective on kar do  */
+            perspective: 10px ;
+            
+        }
+
+        .container{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:100%;
+            transform-style: preserve-3d;
+            z-index: -1;
+        }
+
+        .background , .foreimage{
+            position: absolute;
+            height:100%;
+            width:100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+        
+        /* .heading{
+
+            position: relative;
+            justify-content: flex-start;
+            align-items: flex-start;
+            z-index: -1;
+        } */
+
+        .background{
+            transform: translateZ(-40px) scale(5); 
+
+        }
+
+        .foreimage{
+            transform: translateZ(-20px) scale(3);
+        }
+
+        h1{
+            position: absolute;
+            top: 5rem;
+            left:70%;
+            width:100%;
+            transform: translateX(-50%);
+            font-size: 3rem;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+
+        }
+
+        section{
+            background-color: rgb(45, 45, 45);
+            color: white;
+            padding:5rem 0;
+        }
+
+        .bg1{
+            background-image: url(motivation.png);
+            
+            
+        }
+
+        .bg2{
+            background-image: url(motivation4.jpeg);
+        }
+
+        .bg3{
+            background-image: url(motivation3.jpeg);
+        }
+
+        .sec_heading{
+            font-size: 5rem;
+            padding: 0 10rem;
+        
+        }
+
+        .desc{
+            position: absolute;
+            background-color: white;
+            padding: 0.5rem 2.5rem;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateX (-50%) ;
+            color: black;
+            font-size: 3.5rem;
+            font-weight: 600;
+
+            
+
+        }
+
+        .text{
+             font-size: 1.5rem;
+             padding: 0 10rem;
+             margin: 5rem 0;
+           
+        }
+
+        .bg{
+            
+            position: relative;
+            width: 100%;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+        <div class="wrapper">
+
+
+            <div class="container">
+                <img src="background.png" class="background" width="100%">
+                <img src="foreimage.png" class="foreimage" width="10%">
+                <h1 class="heading"> 
+                    <span style="color: rgb(227, 223, 107);">
+                        MANZIL  MILEGI  CHALTE  RAHO.
+                    </span>
+                 </h1>
+            </div>
+
+            <section>
+
+
+                <h2 class="sec_heading">
+                    ... time is now   ...
+                </h2>
+                <p class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nesciunt nam earum cum id distinctio hic aliquam officiis aliquid maiores! Necessitatibus iure nam dolorem culpa ullam? Hic quasi labore architecto!
+
+                    <br><br>
+
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ratione sit illum voluptatibus. Quas distinctio et, dolor rerum numquam iusto quos vero obcaecati eum exercitationem.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus obcaecati consectetur harum nostrum ut quidem recusandae, explicabo dolorum nesciunt libero! 
+                </p>
+
+                <div class="bg bg1">
+                    <h2 class="desc">
+                        ...start ...
+                    </h2>
+
+                    <p class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nesciunt nam earum cum id distinctio hic aliquam officiis aliquid maiores! Necessitatibus iure nam dolorem culpa ullam? Hic quasi labore architecto!
+    
+                        <br><br>
+    
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ratione sit illum voluptatibus. Quas distinctio et, dolor rerum numquam iusto quos vero obcaecati eum exercitationem.
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus obcaecati consectetur harum nostrum ut quidem recusandae, explicabo dolorum nesciunt libero! 
+                    </p>
+    
+                </div>
+
+                <div class="bg bg2">
+                    <h2 class="desc">
+                        ...stay motivated ...
+                    </h2>
+
+                    <p class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nesciunt nam earum cum id distinctio hic aliquam officiis aliquid maiores! Necessitatibus iure nam dolorem culpa ullam? Hic quasi labore architecto!
+    
+                        <br><br>
+    
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ratione sit illum voluptatibus. Quas distinctio et, dolor rerum numquam iusto quos vero obcaecati eum exercitationem.
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus obcaecati consectetur harum nostrum ut quidem recusandae, explicabo dolorum nesciunt libero! 
+                    </p>
+    
+                </div>
+
+                <div class="bg bg3 ">
+                    <h2 class="desc">
+                        ...have patience...
+                    </h2>
+
+                    <p class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nesciunt nam earum cum id distinctio hic aliquam officiis aliquid maiores! Necessitatibus iure nam dolorem culpa ullam? Hic quasi labore architecto!
+    
+                        <br><br>
+    
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ratione sit illum voluptatibus. Quas distinctio et, dolor rerum numquam iusto quos vero obcaecati eum exercitationem.
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus obcaecati consectetur harum nostrum ut quidem recusandae, explicabo dolorum nesciunt libero! 
+                    </p>
+    
+                </div>
+
+            </section>
+
+        </div>
+</body>
+</html>
